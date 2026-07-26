@@ -369,7 +369,7 @@ input x -> feature extractor F -> label classifier
 Forward pass:
 
 $$
-\operatorname{GRL}(f)=f.
+\text{GRL}(f)=f.
 $$
 
 Backward pass:
@@ -395,7 +395,7 @@ Standard FID uses penultimate/global-average-pooling features from a fixed pretr
 $$
 \operatorname{FID}
 =\|\mu_r-\mu_g\|^2
-+\operatorname{Tr}\left(
++\text{Tr}\left(
 \Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2}
 \right).
 $$
@@ -409,7 +409,7 @@ $$
 For one-dimensional features with $\mu_r=0$, $\mu_g=1$, $\sigma_r=1$, and $\sigma_g=2$,
 
 $$
-\operatorname{FID}=(0-1)^2+(1-2)^2=2.
+\text{FID}=(0-1)^2+(1-2)^2=2.
 $$
 
 **Punjabi intuition:** Do mithai batches compare karo: average taste/shape $\mu$ te variety $\Sigma$. Sirf ik sohna ladoo kaafi nahi.
@@ -447,7 +447,7 @@ $$
 | GAN inversion | $z^*=\arg\min_z\mathcal{L}(G(z),x)$ |
 | Latent regression | $\min_E\mathbb{E}\|E(G(z))-z\|^2$ |
 | GRL | $g_{\text{feature}}=-\lambda g_{\text{upstream}}$ |
-| FID | $\|\mu_r-\mu_g\|^2+\operatorname{Tr}(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2})$ |
+| FID | $\|\mu_r-\mu_g\|^2+\text{Tr}(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2})$ |
 
 ## Final memory line
 
