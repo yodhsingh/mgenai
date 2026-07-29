@@ -6,7 +6,7 @@ lang: en
 
 # Mathematical Foundations of Generative AI
 
-S
+
 # Week 1: $f$-Divergence and Variational Minimization
 
 ## 1. $f$-Divergence
