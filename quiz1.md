@@ -6,7 +6,6 @@ lang: en
 
 # Mathematical Foundations of Generative AI
 
-
 # Week 1: $f$-Divergence and Variational Minimization
 
 ## 1. $f$-Divergence
@@ -373,7 +372,7 @@ input x -> feature extractor F -> label classifier
 Forward pass:
 
 $$
-\operatorname{GRL}(f)=f.
+\mathrm{GRL}(f)=f.
 $$
 
 Backward pass:
@@ -397,9 +396,9 @@ If the domain classifier achieves $100\%$ accuracy, source and target features a
 Standard FID uses penultimate/global-average-pooling features from a fixed pretrained Inception-v3 network.
 
 $$
-\operatorname{FID}
+\mathrm{FID}
 =\|\mu_r-\mu_g\|^2
-+\operatorname{Tr}(
++\mathrm{Tr}(
 \Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2}
 ).
 $$
@@ -413,7 +412,7 @@ $$
 For one-dimensional features with $\mu_r=0$, $\mu_g=1$, $\sigma_r=1$, and $\sigma_g=2$,
 
 $$
-\operatorname{FID}=(0-1)^2+(1-2)^2=2.
+\mathrm{FID}=(0-1)^2+(1-2)^2=2.
 $$
 
 **Punjabi intuition:** Do mithai batches compare karo: average taste/shape $\mu$ te variety $\Sigma$. Sirf ik sohna ladoo kaafi nahi.
@@ -505,7 +504,7 @@ $$
 $$
 
 $$
-L_G^{\text{ns}}=-\operatorname{mean}(\log D(G(z\mid y),y)).
+L_G^{\text{ns}}=-\mathrm{mean}(\log D(G(z\mid y),y)).
 $$
 
 - **Use when:** label/class $y$ appears. Example: “make a digit 7” or “make a red tractor,” not just any image.
@@ -532,8 +531,8 @@ W_1(P_r,P_g)=\sup_{\|D\|_L\le1}
 $$
 
 $$
-\widehat W=\operatorname{mean}(D(x_{\text{real}}))-
-\operatorname{mean}(D(x_{\text{fake}})).
+\widehat W=\mathrm{mean}(D(x_{\text{real}}))-
+\mathrm{mean}(D(x_{\text{fake}})).
 $$
 
 - **Use when:** outputs are unrestricted real critic scores, not probabilities.
@@ -578,7 +577,7 @@ $$
 g_{\text{feature}}=-\lambda\,g_{\text{upstream}}.
 $$
 
-- **Forward pass:** identity, $\operatorname{GRL}(h)=h$.
+- **Forward pass:** identity, $\mathrm{GRL}(h)=h$.
 - **Backward pass:** reverse sign and scale by $\lambda$. Example: $\lambda=0.2$, $g=[-1,-5]$ gives $[0.2,1.0]$.
 
 ## E. Evaluation (Week 4)
@@ -586,8 +585,8 @@ $$
 **13. Fréchet Inception Distance (FID)**
 
 $$
-\operatorname{FID}=\|\mu_r-\mu_g\|_2^2+
-\operatorname{Tr}(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2}).
+\mathrm{FID}=\|\mu_r-\mu_g\|_2^2+
+\mathrm{Tr}(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2}).
 $$
 
 - **Use features from:** the penultimate / pool3 layer of pretrained Inception-v3, not raw RGB, discriminator convolution features, or generator logits.
