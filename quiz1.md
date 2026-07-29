@@ -6,18 +6,7 @@ lang: en
 
 # Mathematical Foundations of Generative AI
 
-Short exam notes with English terminology, LaTeX-ready equations, Roman Punjabi intuition, and PYQ-style numericals.
-
-## How to reuse these notes
-
-- Inline mathematics uses `$...$`, for example `$D_f(P\|Q)$`.
-- Display mathematics uses `$$...$$`.
-- For a blog, keep one idea per section and explain the formula immediately below it.
-- For Mathcha, copy the content inside `$...$` or `$$...$$` into a math region.
-- For a LaTeX document, the companion `.tex` file is ready to compile.
-
----
-
+S
 # Week 1: $f$-Divergence and Variational Minimization
 
 ## 1. $f$-Divergence
