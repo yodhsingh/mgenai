@@ -145,9 +145,10 @@ $$
 Therefore,
 
 $$
-\frac{P_{\text{data}}(x)}{P_g(x)}=\frac{D^*(x)}{1-D^*(x)}.
+\frac{P_{\mathrm{data}}(x)}{P_g(x)}
+=
+\frac{D^{*}(x)}{1-D^{*}(x)}.
 $$
-
 If $D^*(x)=0.75$, the estimated density ratio is $0.75/0.25=3$.
 
 ## 6. Saturating and Non-Saturating Generator Loss
