@@ -3,7 +3,7 @@
 This formula sheet is compiled based on the provided resources, starting from the EM Algorithm to advanced Generative AI concepts (VAEs, DDPMs), tailored for solving quiz questions.
 
 ## 1. Expectation-Maximization (EM) Algorithm for Gaussian Mixture Models (GMMs)
-- **PDF of Normal Distribution (1D):**
+- **PDF of Normal Distribution (1D):** 
   $$\mathcal{N}(x|\mu, \sigma^2) = rac{1}{\sqrt{2\pi\sigma^2}}e^{-rac{(x-\mu)^2}{2\sigma^2}}$$
 
 - **E-Step (Responsibility / Posterior Probability):**
@@ -29,7 +29,8 @@ This formula sheet is compiled based on the provided resources, starting from th
 
 - **KL Divergence Term (Standard Normal Prior):**
   If $q_\phi(z|x) = \mathcal{N}(\mu, \Sigma)$ and $p(z) = \mathcal{N}(0, I)$:
-  $$D_{KL}[q_\phi(z|x) || p(z)] = -rac{1}{2} \sum_{j=1}^K \left( 1 + \log(\sigma_j^2) - \mu_j^2 - \sigma_j^2 ight)$$
+  $$D_{KL}[q_\phi(z|x) || p(z)] = -rac{1}{2} \sum_{j=1}^K \left( 1 + \log(\sigma_j^2) - \mu_j^2 - \sigma_j^2 
+ight)$$
 
 - **$eta$-VAE Objective:**
   $$F_	heta(q) = 	ext{Reconstruction Loss} + eta \cdot D_{KL}(q_\phi(z|x) || p(z))$$
@@ -53,7 +54,8 @@ This formula sheet is compiled based on the provided resources, starting from th
 
 - **Reverse Process (Inference / Sampling):**
   To obtain a sample, the model must iteratively traverse the reverse decoding process, starting from pure Gaussian noise $x_T \sim \mathcal{N}(0, I)$.
-  $$x_{t-1} = rac{1}{\sqrt{lpha_t}} \left( x_t - rac{1-lpha_t}{\sqrt{1-ar{lpha}_t}} \epsilon_	heta(x_t, t) ight) + \sigma_t z \quad 	ext{where} \quad z \sim \mathcal{N}(0, I)$$
+  $$x_{t-1} = rac{1}{\sqrt{lpha_t}} \left( x_t - rac{1-lpha_t}{\sqrt{1-ar{lpha}_t}} \epsilon_	heta(x_t, t) 
+ight) + \sigma_t z \quad 	ext{where} \quad z \sim \mathcal{N}(0, I)$$
 
 - **DDPM ELBO terms:**
   The ELBO objective consists of three parts:
