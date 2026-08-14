@@ -107,16 +107,15 @@ $$F_\theta(q) = \text{Reconstruction Loss} + \beta \cdot D_{KL}(q_\phi(z\vert{}x
 * **VQ-VAE (Vector Quantized VAE):**
 
 * **Commitment Loss:** $\beta \vert{}\vert{}z_e(x) - \text{sg}[e_k]\vert{}\vert{}_2^2$ (where 'sg' is the stop-gradient operator).
-
+Intuition (ਰੀਲਾਂ ਵਾਲੀ ਦੁਕਾਨ): ਇਨਕੋਡਰ ਇੱਕ Continuous ਵੈਕਟਰ $z_e(x)$ (ਨਵਾਂ ਧਾਗਾ/ਰੰਗ) ਬਣਾਉਂਦਾ ਹੈ, ਅਤੇ Commitment loss ਉਸਨੂੰ ਮਜਬੂਰ ਕਰਦਾ ਹੈ ਕਿ ਉਹ ਕੋਡਬੁੱਕ ਦੇ ਫਿਕਸ ਵੈਕਟਰ $e_k$ (ਦੁਕਾਨ ਵਿਚਲੀ ਅਸਲੀ ਰੀਲ) ਦੇ ਨੇੜੇ ਰਹੇ।
 
 * **Size of Discrete Latent Representation (in bits):**
 
 
 For a tensor of shape $[B, H, W, D]$ and a codebook with $K$ vectors:
 
-
 $$\text{Total Bits} = B \times H \times W \times \log_2(K)$$
-
+Example: ਜੇ 1 ਤਸਵੀਰ ($B=1$) $4 \times 4$ ਦੇ ਗਰਿੱਡ ਵਿੱਚ ਹੈ ($H=4, W=4$), ਅਤੇ ਕੋਡਬੁੱਕ ਵਿੱਚ 256 ਵੈਕਟਰ ($K=256$) ਹਨ, ਤਾਂ: $1 \times 4 \times 4 \times \log_2(256) = 16 \times 8 = 128 \text{ bits}$.
 
 
 
