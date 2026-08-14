@@ -93,20 +93,17 @@ $$D_{KL}[q_\phi(z\vert{}x) \vert{}\vert{} p(z)] = -\frac{1}{2} \sum_{j=1}^K \lef
 
 $$F_\theta(q) = \text{Reconstruction Loss} + \beta \cdot D_{KL}(q_\phi(z\vert{}x) \vert{}\vert{} p(z))$$
 
-
-
-*Higher $\beta$ leads to better disentanglement but can cause posterior collapse. Lower $\beta$ leads to better reconstructions.*
-
-
-### 2. Variational Autoencoders (VAEs) (Updated Section)
-
-*   **ELBO vs. Loss (Important Distinction):**
+* **ELBO vs. Loss (Important Distinction):**
     *   **ELBO Objective ($J_\theta$) (To Maximize):**
         $$J_\theta(q) = \mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - \beta \cdot D_{KL}(q_\phi(z|x) || p(z))$$
         *(Note: If a question gives "Reconstruction Mismatch" or "Negative Log-Likelihood" as a positive number $X$, then $\mathbb{E}[\log p_\theta(x|z)]$ will be $-X$. The overall $J_\theta$ can be negative).*
     *   **Loss Function (To Minimize):**
         $$\text{Loss} = -J_\theta(q) = \text{Negative Log-Likelihood} + \beta \cdot D_{KL}$$
         
+
+
+*Higher $\beta$ leads to better disentanglement but can cause posterior collapse. Lower $\beta$ leads to better reconstructions.*
+
 
 * **VQ-VAE (Vector Quantized VAE):**
 
