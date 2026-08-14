@@ -1,4 +1,3 @@
----
 
 # Mathematical Foundations of Generative AI - Formula Sheet
 
