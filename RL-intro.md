@@ -50,11 +50,4 @@ L_{PPO}(\theta)=\mathbb{E}_t\left[\min(r_t(\theta)A_t, \text{clip}(r_t(\theta),1
 
 ---
 
-## 🧭 Next Study Options
-- **Advantage calculation example**  
-- **Bradley‑Terry preference model**  
-- **Worked numerical example**  
-
----
-
 Veere, hun main puchda hāṅ: tainū agla step **Advantage calculation** nu ek numerical worked example vich samjhna pasand hovega, ja **Bradley‑Terry preference model** explore kariye?
